@@ -13,6 +13,8 @@ from pytorch_grad_cam.utils.image import show_cam_on_image
 
 import joblib
 
+import gdown
+import zipfile
 
 # Page Setup:
 st.set_page_config( page_title="Deepfake Detection", page_icon="🔍", layout="wide",
