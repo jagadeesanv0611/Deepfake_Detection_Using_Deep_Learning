@@ -2,19 +2,13 @@
 import streamlit as st
 import torch
 import torch.nn as nn
-
 from torchvision import models, transforms
-
 from PIL import Image
-
 import numpy as np
 from pytorch_grad_cam import GradCAM
 from pytorch_grad_cam.utils.image import show_cam_on_image
-
 import joblib
 
-import gdown
-import zipfile
 
 # Page Setup:
 st.set_page_config( page_title="Deepfake Detection", page_icon="🔍", layout="wide",
@@ -84,18 +78,15 @@ elif page == "EDA":
               col1, col2 = st.columns([1,1])
               with col1:
                     age_distribution_before_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\age_distribution_before_cleaning.pkl")
-                    #min_age_dist_fig = load_model("min_age_dist_box_plot.pkl")
                     st.plotly_chart(age_distribution_before_fig, use_container_width=True)
 
               with col2:
                     age_distribution_after_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\age_distribution_after_cleaning.pkl")
-                    #min_age_dist_fig = load_model("min_age_dist_box_plot.pkl")
                     st.plotly_chart(age_distribution_after_fig, use_container_width=True)
 
               col3 = st.columns(1)[0]
               with col3:
                     age_group_dist_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\age_group_dist_real_and_fake.pkl")
-                    #min_max_age_dist_fig = load_model("min_max_age_dist.pkl")
                     st.plotly_chart(age_group_dist_fig, use_container_width=True)
 
 
@@ -104,12 +95,10 @@ elif page == "EDA":
               col1, col2 = st.columns([1,1])
               with col1:
                     real_vs_fake_before_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\real_vs_fake_image_count_before_cleaning.pkl")
-                    #min_age_dist_fig = load_model("min_age_dist_box_plot.pkl")
                     st.plotly_chart(real_vs_fake_before_fig, use_container_width=True)
 
               with col2:
                     real_vs_fake_after_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\real_vs_fake_image_count_after_cleaning.pkl")
-                    #min_age_dist_fig = load_model("min_age_dist_box_plot.pkl")
                     st.plotly_chart(real_vs_fake_after_fig, use_container_width=True)
 
 
@@ -117,46 +106,38 @@ elif page == "EDA":
               col1, col2 = st.columns([1,1])
               with col1:
                     gender_dist_before_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\gender_distribution_before_cleaning.pkl")
-                    #min_age_dist_fig = load_model("min_age_dist_box_plot.pkl")
                     st.plotly_chart(gender_dist_before_fig, use_container_width=True)
 
               with col2:
                     gender_dist_after_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\gender_distribution_after_cleaning.pkl")
-                    #min_age_dist_fig = load_model("min_age_dist_box_plot.pkl")
                     st.plotly_chart(gender_dist_after_fig, use_container_width=True)
 
               col3 = st.columns(1)[0]
               with col3:
                     gender_dist_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\gender_wise_dist_real_and_fake.pkl")
-                    #min_max_age_dist_fig = load_model("min_max_age_dist.pkl")
                     st.plotly_chart(gender_dist_fig, use_container_width=True)
 
 
         elif selection == "Visual Sample Inspection":
                 sample_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\visual_sample_inspection.pkl")
-                #sex_disease_dist_fig = load_model("Sex_Eligibility_Disease_Cat.pkl")
                 st.plotly_chart(sample_fig, use_container_width=True)
         
 
         elif selection == "Real and Fake Images":
                 real_and_fake_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\class_wise_real_and_fake.pkl")
-                #correlation_mat_fig = load_model("Correlation_matrix_disease_cat.pkl")
                 st.plotly_chart(real_and_fake_fig, use_container_width=True)
 
             
         elif selection == "Confusion Matrix":
                 cm_train_resnet_50_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\confu_resnet_train_fig.pkl")
-                #cm_test_svm_fig = load_model("confu_matrix_test_svm.pkl")
                 st.plotly_chart(cm_train_resnet_50_fig, use_container_width=True)
 
                 cm_test_resnet_50_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\confu_resnet_test_fig.pkl")
-                #cm_train_svm_fig = load_model("confu_matrix_train_svm.pkl")
                 st.plotly_chart(cm_test_resnet_50_fig, use_container_width=True)
 
 
         elif selection == "ROC curve":
                 roc_curve_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\models\resnet_roc_curve_fig.pkl")
-                #correlation_mat_fig = load_model("Correlation_matrix_disease_cat.pkl")
                 st.plotly_chart(roc_curve_fig, use_container_width=True)
 
 
