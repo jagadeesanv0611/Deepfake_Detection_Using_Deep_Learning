@@ -162,6 +162,7 @@ elif page == "EDA":
             "Gender Distribution",
             "Visual Sample Inspection",
             "Real and Fake Images",
+            "Correlation Analysis",
             "Confusion Matrix",
             "ROC curve",
         ],
@@ -196,6 +197,10 @@ elif page == "EDA":
 
     elif selection == "Real and Fake Images":
         show_fig("class_wise_real_and_fake")
+
+    elif selection == "Correlation Analysis":
+        show_fig("correlation_matrix")
+
 
     elif selection == "Confusion Matrix":
         show_fig("confu_resnet_train_fig")
@@ -276,6 +281,3 @@ elif page == "Image Prediction":
                 f"The heatmap shows the regions that most supported the "
                 f"**{prediction}** prediction (red = strongest influence)."
             )
-
-
-
