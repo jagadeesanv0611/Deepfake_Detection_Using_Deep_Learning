@@ -1,1 +1,20 @@
+--extra-index-url https://download.pytorch.org/whl/cu126
+
+pandas
+numpy
+nbformat
+matplotlib
+seaborn
+plotly
+scikit-learn
+pillow
+requests
+tqdm
+streamlit
+opencv-python
+path
+
+torch==2.14.1+cu126
+torchvision==0.29.1
+
 
