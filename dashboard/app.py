@@ -1,4 +1,5 @@
 from pathlib import Path
+import pandas as pd
 import joblib
 import numpy as np
 import plotly.io as pio
@@ -200,6 +201,40 @@ elif page == "EDA":
 
     elif selection == "Correlation Analysis":
         show_fig("correlation_matrix")
+
+        st.subheader("Statistical Significance (P-value Matrix)")
+        p_value_df = pd.DataFrame(
+            {
+                "label": [0.0000, 0.0000, 0.0056],
+                "gender": [0.0000, 0.0000, 0.3347],
+                "age_group": [0.0056, 0.3347, 0.0000]
+            },
+            index=["label", "gender", "age_group"]
+        )
+        st.dataframe(p_value_df, use_container_width=True)
+
+
+        st.subheader("Real vs Fake Distribution by Gender (%)")
+        gender_df = pd.DataFrame(
+            {
+                "FAKE": [9.583737, 9.734513, 73.253493],
+                "REAL": [90.416263, 90.265487, 26.746507]
+            },
+            index=["Female", "Male", "Unknown"]
+        )
+        st.dataframe(  gender_df.style.format("{:.2f}"),  use_container_width=True  )
+
+
+
+        st.subheader("Real vs Fake Distribution by Age Group (%)")
+        age_df = pd.DataFrame(
+            {
+                "FAKE": [47.320807, 53.755523, 48.866856, 49.407407],
+                "REAL": [52.679193, 46.244477, 51.133144, 50.592593]
+            },
+            index=["18-25", "26-35", "36-50", "50+"]
+        )
+        st.dataframe( age_df.style.format("{:.2f}"), use_container_width=True )
 
 
     elif selection == "Confusion Matrix":
