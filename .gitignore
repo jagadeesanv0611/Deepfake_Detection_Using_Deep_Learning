@@ -1,0 +1,18 @@
+venv_gpu/
+venv/
+.venv/
+rough_testing/
+**pycache**/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+
+# Large model files - stored in Google Drive
+
+models/*.pth
+models.zip
+
+# Raw images - stored locally
+
+data/raw_images/
+data/raw_images.zip
