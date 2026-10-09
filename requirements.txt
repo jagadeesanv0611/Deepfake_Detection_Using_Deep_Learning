@@ -1,4 +1,4 @@
---extra-index-url https://download.pytorch.org/whl/cu126
+# --extra-index-url https://download.pytorch.org/whl/cu126
 
 pandas
 numpy
@@ -14,9 +14,9 @@ streamlit
 opencv-python
 path
 
-torch==2.14.1+cu126
-torchvision==0.29.1
+# torch==2.14.1+cu126
+# torchvision==0.29.1
 
 grad-cam
-
-godown
+torch
+torchvision
