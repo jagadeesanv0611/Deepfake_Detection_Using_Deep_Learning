@@ -40,7 +40,7 @@ def load_model():
     model = models.resnet50(weights=None)
 
     # Same classification head used during training
-    model.fc = nn.Sequential(
+    model.fc = nn.Sequential(       #type: ignore
         nn.Linear(model.fc.in_features, 256),
         nn.ReLU(),
         nn.Dropout(0.5),
@@ -138,16 +138,6 @@ if page == "Home":
         """
     )
 
-    st.subheader("Test Set Results")
-    st.table({
-        "Model": ["Custom CNN", "ResNet50", "ViT-B/16"],
-        "Accuracy": ["96.52%", "99.28%", "99.16%"],
-        "Precision": ["95.31%", "99.52%", "99.51%"],
-        "Recall": ["97.83%", "99.04%", "98.80%"],
-        "F1-Score": ["96.55%", "99.28%", "99.15%"],
-        "AUC-ROC": ["0.9959", "0.9998", "0.9986"],
-    })
-
 
 # ------------------------------------------------------------------
 # 7. EDA
@@ -166,9 +156,8 @@ elif page == "EDA":
             "Correlation Analysis",
             "Confusion Matrix",
             "ROC curve",
-        ],
-        # default="Real vs Fake Image",
-    )
+            "Grad-CAM"
+                    ],)
 
     if selection == "Real vs Fake Image":
         col1, col2 = st.columns(2)
@@ -201,48 +190,23 @@ elif page == "EDA":
 
     elif selection == "Correlation Analysis":
         show_fig("correlation_matrix")
-
-        st.subheader("Statistical Significance (P-value Matrix)")
-        p_value_df = pd.DataFrame(
-            {
-                "label": [0.0000, 0.0000, 0.0056],
-                "gender": [0.0000, 0.0000, 0.3347],
-                "age_group": [0.0056, 0.3347, 0.0000]
-            },
-            index=["label", "gender", "age_group"]
-        )
-        st.dataframe(p_value_df, use_container_width=True)
-
-
-        st.subheader("Real vs Fake Distribution by Gender (%)")
-        gender_df = pd.DataFrame(
-            {
-                "FAKE": [9.583737, 9.734513, 73.253493],
-                "REAL": [90.416263, 90.265487, 26.746507]
-            },
-            index=["Female", "Male", "Unknown"]
-        )
-        st.dataframe(  gender_df.style.format("{:.2f}"),  use_container_width=True  )
-
-
-
-        st.subheader("Real vs Fake Distribution by Age Group (%)")
-        age_df = pd.DataFrame(
-            {
-                "FAKE": [47.320807, 53.755523, 48.866856, 49.407407],
-                "REAL": [52.679193, 46.244477, 51.133144, 50.592593]
-            },
-            index=["18-25", "26-35", "36-50", "50+"]
-        )
-        st.dataframe( age_df.style.format("{:.2f}"), use_container_width=True )
+        show_fig("correlation_image_feature_label")
+        show_fig("correlation_gender_group_label")
+        show_fig("correlation_age_group_label")
 
 
     elif selection == "Confusion Matrix":
         show_fig("confu_resnet_train_fig")
+        show_fig("confu_resnet_valfig")
         show_fig("confu_resnet_test_fig")
 
     elif selection == "ROC curve":
         show_fig("resnet_roc_curve_fig")
+
+    elif selection == "Grad-CAM":
+        show_fig("grad_cam_fig")
+
+
 
 
 # ------------------------------------------------------------------
@@ -260,10 +224,10 @@ elif page == "Image Prediction":
         image = ImageOps.exif_transpose(image).convert("RGB")
 
         st.subheader("Uploaded Image")
-        st.image(image, width=400)
+        st.image(image, width=500)
 
         if st.button("🔍 Predict", type="primary"):
-            input_tensor = transform(image).unsqueeze(0).to(device)
+            input_tensor = transform(image).unsqueeze(0).to(device) #type: ignore
 
             # Model prediction
             with torch.no_grad():
@@ -298,7 +262,7 @@ elif page == "Image Prediction":
             ) as cam:
                 grayscale_cam = cam(
                     input_tensor=input_tensor,
-                    targets=[BinaryOutputTarget(prediction == "FAKE")],
+                    targets=[BinaryOutputTarget(prediction == "FAKE")], #type: ignore
                 )[0]
 
             rgb_image = np.array(image.resize((224, 224))) / 255.0
