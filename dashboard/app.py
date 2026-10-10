@@ -197,7 +197,7 @@ elif page == "EDA":
 
     elif selection == "Confusion Matrix":
         show_fig("confu_resnet_train_fig")
-        show_fig("confu_resnet_valfig")
+        show_fig("confu_resnet_val_fig")
         show_fig("confu_resnet_test_fig")
 
     elif selection == "ROC curve":
