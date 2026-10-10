@@ -189,7 +189,7 @@ elif page == "EDA":
         show_fig("class_wise_real_and_fake")
 
     elif selection == "Correlation Analysis":
-        show_fig("correlation_matrix")
+        show_fig("correlation_matrixs")
         show_fig("correlation_image_feature_label")
         show_fig("correlation_gender_group_label")
         show_fig("correlation_age_group_label")
