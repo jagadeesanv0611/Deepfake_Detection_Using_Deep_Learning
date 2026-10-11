@@ -79,7 +79,36 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 
 - From the above chart we understood how the image features width, height, aspect ratio, file size kb and brightness are correlate with label.
 
+# Model Training:
+- For this project three models are trained, those are Custom CNN, ResNet50 and ViT.
+- The results are,
+- 
+===== CUSTOM CNN RESULTS =====
 
+      Metric     Train  Validation      Test
+0   Accuracy  0.966769    0.968627  0.968750
+1  Precision  0.996696    0.997429  0.994898
+2     Recall  0.941238    0.944039  0.946602
+3   F1-Score  0.968173    0.970000  0.970149
+4    AUC-ROC  0.992261    0.990927  0.991116
+
+===== RESNET50 RESULTS =====
+
+      Metric     Train  Validation      Test
+0   Accuracy  0.999441    0.993464  0.994792
+1  Precision  1.000000    1.000000  0.995146
+2     Recall  0.998960    0.987835  0.995146
+3   F1-Score  0.999480    0.993880  0.995146
+4    AUC-ROC  0.999999    0.999849  0.999789
+
+===== VIT RESULTS =====
+
+      Metric     Train  Validation      Test
+0   Accuracy  0.998883    0.989542  0.992188
+1  Precision  1.000000    0.995086  0.997549
+2     Recall  0.997920    0.985401  0.987864
+3   F1-Score  0.998959    0.990220  0.992683
+4    AUC-ROC  0.999997    0.999079  0.999189
 
 
 
