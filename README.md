@@ -82,7 +82,7 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 # Model Training:
 - For this project three models are trained, those are Custom CNN, ResNet50 and ViT.
 - The results are,
-- 
+
 ### Model Performance Comparison
 
 | Model | Metric | Train | Validation | Test |
@@ -104,6 +104,7 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 | | AUC-ROC | 1.0000 | 0.9991 | 0.9992 |
 
 
+- From this ResNet50 is best when compare with other models results.
 
 
 
