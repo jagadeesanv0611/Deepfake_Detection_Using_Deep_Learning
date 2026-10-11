@@ -41,6 +41,11 @@
 - Augmentation done for training data only: random horizontal flip and random rotation up to 10 degrees. Validation and test images are never augmented.
 A custom Dataset loads one image at a time. Dataloader batches them (batch size 32) and shuffles only the training data. No shuffle done in validation and test.
 
+# EDA:
+- Exploratory Data Analysis (EDA) is used to summarize, visualize, and understand the dataset.
+### Real vs Fake images Before and After:
+
+
 
 
 
