@@ -63,7 +63,9 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 
 ## Association between variables:
 <img width="602" height="528" alt="correlation_bet_variables" src="https://github.com/user-attachments/assets/b010b47d-0f44-4926-bb8e-46af8e6192f8" />
+
 - From the above chart, we found Gender(63%) and age group (3%) is how much it correlate with Label. By using this we can predict whether those feature affect the label feature.
+
 
 ## Label share with gender and age group:
 <img width="598" height="552" alt="label_share_inside_each_gender" src="https://github.com/user-attachments/assets/2199e046-f5f8-4074-8ff5-dfd205896130" />
