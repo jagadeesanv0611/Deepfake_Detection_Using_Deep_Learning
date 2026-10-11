@@ -189,7 +189,7 @@ elif page == "EDA":
         show_fig("class_wise_real_and_fake")
 
     elif selection == "Correlation Analysis":
-        show_fig("correlation_matrixs")
+        show_fig("correlation_matrix")
         show_fig("correlation_image_feature_label")
         show_fig("correlation_gender_group_label")
         show_fig("correlation_age_group_label")
@@ -197,7 +197,7 @@ elif page == "EDA":
 
     elif selection == "Confusion Matrix":
         show_fig("confu_resnet_train_fig")
-        show_fig("confu_resnet_val_fig")
+        show_fig("confu_resnet_valfig")
         show_fig("confu_resnet_test_fig")
 
     elif selection == "ROC curve":
