@@ -70,10 +70,15 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 ## Label share with gender and age group:
 <img width="598" height="552" alt="label_share_inside_each_gender" src="https://github.com/user-attachments/assets/2199e046-f5f8-4074-8ff5-dfd205896130" />
 <img width="596" height="557" alt="label_share_inside_each_age_group" src="https://github.com/user-attachments/assets/06745c5f-8c1e-4278-a91d-be237bb7cfca" />
-  - From the above chart we understood how the fake and real images are shared equally in age wise and gender wise.
+
+- From the above chart we understood how the fake and real images are shared equally in age wise and gender wise.
 
 
-## 
+## Correlation between image features and label:
+<img width="712" height="591" alt="correlation_image_features_with_label" src="https://github.com/user-attachments/assets/2504e296-c068-4458-894b-563ea04a45a3" />
+
+- From the above chart we understood how the image features width, height, aspect ratio, file size kb and brightness are correlate with label.
+
 
 
 
