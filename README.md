@@ -43,7 +43,8 @@
 # Data Splitting:
 - Before preprocessing data must be split in 70/15/15, it is splitted in stratified way train/test/validation, where the overall combine real and fake counts 5,114 is splitted for train -> 3581 images, val -> 765 images, test -> 768 images keeping the Real/Fake ratio equal in each.
 
-  | Split | Images | REAL share |
+
+| Split | Images | REAL share |
 |---|---|---|
 | Train | 3,581 | 50.2% |
 | Validation | 765 | 50.2% |
