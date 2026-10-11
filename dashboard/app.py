@@ -130,7 +130,7 @@ if page == "Home":
     st.subheader("Project Overview")
     st.markdown(
         """
-        - **Dataset:** 5,557 face images (real and AI-generated), split into train / validation / test
+        - **Dataset:** 5,114 face images (real and AI-generated), split into train / validation / test
           (about 70 / 15 / 15) with stratification on the label.
         - **Models compared:** Custom CNN, ResNet50 (transfer learning), Vision Transformer (ViT-B/16).
         - **Deployed model:** ResNet50, with the last block (`layer4`) fine-tuned and a custom classification head.
