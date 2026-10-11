@@ -83,32 +83,25 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 - For this project three models are trained, those are Custom CNN, ResNet50 and ViT.
 - The results are,
 - 
-===== CUSTOM CNN RESULTS =====
+### Model Performance Comparison
 
-      Metric     Train  Validation      Test
-0   Accuracy  0.966769    0.968627  0.968750
-1  Precision  0.996696    0.997429  0.994898
-2     Recall  0.941238    0.944039  0.946602
-3   F1-Score  0.968173    0.970000  0.970149
-4    AUC-ROC  0.992261    0.990927  0.991116
-
-===== RESNET50 RESULTS =====
-
-      Metric     Train  Validation      Test
-0   Accuracy  0.999441    0.993464  0.994792
-1  Precision  1.000000    1.000000  0.995146
-2     Recall  0.998960    0.987835  0.995146
-3   F1-Score  0.999480    0.993880  0.995146
-4    AUC-ROC  0.999999    0.999849  0.999789
-
-===== VIT RESULTS =====
-
-      Metric     Train  Validation      Test
-0   Accuracy  0.998883    0.989542  0.992188
-1  Precision  1.000000    0.995086  0.997549
-2     Recall  0.997920    0.985401  0.987864
-3   F1-Score  0.998959    0.990220  0.992683
-4    AUC-ROC  0.999997    0.999079  0.999189
+| Model | Metric | Train | Validation | Test |
+| :--- | :--- | :--- | :--- | :--- |
+| **Custom CNN** | Accuracy | 0.9668 | 0.9686 | 0.9688 |
+| | Precision | 0.9967 | 0.9974 | 0.9949 |
+| | Recall | 0.9412 | 0.9440 | 0.9466 |
+| | F1-Score | 0.9682 | 0.9700 | 0.9701 |
+| | AUC-ROC | 0.9923 | 0.9909 | 0.9911 |
+| **ResNet50** | Accuracy | 0.9994 | 0.9935 | 0.9948 |
+| | Precision | 1.0000 | 1.0000 | 0.9951 |
+| | Recall | 0.9990 | 0.9878 | 0.9951 |
+| | F1-Score | 0.9995 | 0.9939 | 0.9951 |
+| | AUC-ROC | 1.0000 | 0.9998 | 0.9998 |
+| **ViT** | Accuracy | 0.9989 | 0.9895 | 0.9922 |
+| | Precision | 1.0000 | 0.9951 | 0.9975 |
+| | Recall | 0.9979 | 0.9854 | 0.9879 |
+| | F1-Score | 0.9990 | 0.9902 | 0.9927 |
+| | AUC-ROC | 1.0000 | 0.9991 | 0.9992 |
 
 
 
