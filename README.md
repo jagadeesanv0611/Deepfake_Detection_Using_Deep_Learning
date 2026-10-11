@@ -45,6 +45,10 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 - Exploratory Data Analysis (EDA) is used to summarize, visualize, and understand the dataset.
 ### Real vs Fake images Before and After:
 
+<img width="666" height="513" alt="real_fake_counts_before_cleaning" src="https://github.com/user-attachments/assets/8c625b81-3ba8-4bf0-8f37-44d40d8fac2d" />
+<img width="662" height="503" alt="real_fake_counts_after_cleaning" src="https://github.com/user-attachments/assets/17d5f16e-76a7-4539-ac9b-1b9e7997baf6" />  
+
+
 
 
 
