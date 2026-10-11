@@ -31,6 +31,13 @@
 - Handle missing values (null data) to ensures the dataset is complete and prevents errors during analysis and model training.
 - Removing the duplicate image urls.
 - Here images downloads are done with the help of image URL's and image id's. where "requests.get(url, timeout=10)" ask server for image and downloaded images are stored in data/image folder and failed one's are saved as Failed Download.csv. The script is runed for three times to get total count. Counts got while running for first time is 2,894 counts, second time is 5,547 and third time is 5,557.
+
+| Item | Value |
+|---|---|
+| Rows in the original CSV | 6,557 (3,767 FAKE, 2,790 REAL) |
+| Images downloaded successfully | 5,557 (84.8%) |
+| Failed downloads | 1,000 (dead links, timeouts, connection errors) |
+ 
 - After Downloading only 5,557 images are passed and 1,000 are failed to download, so failed one can be considered as fake. Even though images are downloaded have to check whether any duplicate images are repeated because for model train and analyze their should not be repeated images, then the model will be affected in accuracy. After removing duplicate images, final count is 5114, so, the overall percentage is 78%.
 
 # Data Splitting:
