@@ -58,6 +58,12 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 - Age counts before cleaning 18-25 -> 1681, 36-50 -> 1670, 26-35 -> 1650 & 50+ -> 1556, whereas after cleaning 18-25 -> 1318, 36-50 -> 1301, 26-35 -> 1258 & 50+ -> 1237.
 - From this picture we're come's to know that real and fake images are somewhat equally placed.
 
+# Correlation Analysis:
+- Correlation analysis is made to check whether each feature depends on other feature in a dataset.
+
+## Association between variables:
+<img width="602" height="528" alt="correlation_bet_variables" src="https://github.com/user-attachments/assets/b010b47d-0f44-4926-bb8e-46af8e6192f8" />
+- 
 
 
 
