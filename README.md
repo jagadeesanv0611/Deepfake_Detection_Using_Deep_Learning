@@ -45,13 +45,13 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 - Exploratory Data Analysis (EDA) is used to summarize, visualize, and understand the dataset.
 ## Real vs Fake images Before and After:
 <img width="1353" height="512" alt="real_vs_fake_before_after" src="https://github.com/user-attachments/assets/ab3eb40a-f794-41ae-9f31-5acce5febef9" />
-
 - Image count, Before cleaning real -> 2,790 (42.5%) and fake -> 3,767 (57.5%) and After cleaning real -> 2,368 (46.3%) and fake -> 2,746 (53.7%).
 - From this we can say more than 1,000 images are fake and some count reduced in real is duplicate.
 
 ## Gender Count Before and After:
 <img width="1353" height="572" alt="gender_dist_before_after" src="https://github.com/user-attachments/assets/1c791727-74f5-4e57-b847-4ef5b69bf370" />
--  
+- Gender count before cleaning Unknown -> 4,507 , Female -> 1,033 & Male -> 1,017,  whereas after cleaning Unknown -> 3,354, Female -> 890 & Male -> 870.
+- From this we can understand moreover counts are affected for both genders.
 
 
 
