@@ -43,6 +43,16 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 
 # EDA:
 - Exploratory Data Analysis (EDA) is used to summarize, visualize, and understand the dataset.
+
+## Visualize Sample Inspection:
+<img width="1000" height="1000" alt="sample_images_visualization" src="https://github.com/user-attachments/assets/0245c7bb-9268-4f11-a383-073227baea45" />
+- Here the some of the sample images are shown that how it looks in the image folder.
+
+## Class wise visual comparison between Real and Fake:
+<img width="1200" height="1000" alt="class_wise_visual_comparison" src="https://github.com/user-attachments/assets/953b59f4-3906-42b7-8943-c4cec86505ca" />
+- The above chart shows what are the real images and fake images.
+
+
 ## Real vs Fake images Before and After:
 <img width="1353" height="512" alt="real_vs_fake_before_after" src="https://github.com/user-attachments/assets/ab3eb40a-f794-41ae-9f31-5acce5febef9" />
 - Image count, Before cleaning real -> 2,790 (42.5%) and fake -> 3,767 (57.5%) and After cleaning real -> 2,368 (46.3%) and fake -> 2,746 (53.7%). From this we can say more than 1,000 images are fake and some count reduced in real is duplicate.
@@ -103,15 +113,20 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 | | F1-Score | 0.9990 | 0.9902 | 0.9927 |
 | | AUC-ROC | 1.0000 | 0.9991 | 0.9992 |
 
-
 - From this ResNet50 is best when compare with other models results.
 
 
+# Confusion Matrix:
+### Based on testing:
+<img width="602" height="553" alt="confusion_matrix_ResNet50_test" src="https://github.com/user-attachments/assets/cf21f7a8-fe6c-453d-80d0-cc7b99886ec0" />
 
+### Based on validation:
+<img width="598" height="565" alt="confusion_matrix_ResNet50_val" src="https://github.com/user-attachments/assets/5e6912a5-ca1f-4d28-afa8-f19b91b4e79c" />
 
-
+### Based on training:
+<img width="605" height="562" alt="confusion_matrix_ResNet50_train" src="https://github.com/user-attachments/assets/3d543f07-22c7-4fc6-80a0-efc65c5cf943" />
 
 
 # Model Deployment:
-
+- Model is deployed using streamlit.
 https://deepfakedetectionusingdeeplearning-2y6kp2b7zdvwcgk2nj5hn9.streamlit.app/
