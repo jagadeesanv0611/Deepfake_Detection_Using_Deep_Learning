@@ -1,0 +1,19 @@
+{
+  "real_fake": {
+    "fake": 0,
+    "real": 1
+  },
+  "gender": {
+    "female": 0,
+    "male": 1,
+    "unknown": 2
+  },
+  "age": {
+    "18-25": 0,
+    "26-35": 1,
+    "36-50": 2,
+    "50+": 3,
+    "not_applicable": 4,
+    "under_18": 5
+  }
+}
