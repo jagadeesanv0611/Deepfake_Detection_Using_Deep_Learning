@@ -1,0 +1,6 @@
+Model,Val F1,Test Accuracy,Test F1,Test AUC
+CNN,1.0,1.0,1.0,1.0
+ResNet50,1.0,1.0,1.0,1.0
+VGG16,1.0,1.0,1.0,1.0
+EfficientNet_B0,1.0,1.0,1.0,1.0
+ViT_B16,1.0,1.0,1.0,1.0
