@@ -57,7 +57,7 @@ MODEL_FILES = {
 SELECTED_ARCH = {
                 "real_fake": "ResNet50",
                 "gender": "ViT-B/16",
-                "age_group": "ResNet50"
+                "age_group": "ViT-B/16"
                 }
 
 TASK_TITLES = {"real_fake": "Real / Fake", "gender": "Gender", "age_group": "Age group"}
@@ -177,25 +177,6 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
-
-# @st.cache_data
-# def load_fig(name: str):
-#     """Load a saved plotly figure from /models (.json preferred, else .pkl)."""
-#     json_path = MODELS_DIR / f"{name}.json"
-#     pkl_path = MODELS_DIR / f"{name}.pkl"
-#     if json_path.exists():
-#         return pio.read_json(json_path)
-#     if pkl_path.exists():
-#         return joblib.load(pkl_path)
-#     return None
-
-
-# def show_fig(name: str):
-#     fig = load_fig(name)
-#     if fig is None:
-#         st.warning(f"Figure not found: {name}")
-#     else:
-#         st.plotly_chart(fig, use_container_width=True)
 
 
 def predict_probs(model: nn.Module, input_tensor: torch.Tensor) -> np.ndarray:
@@ -351,7 +332,12 @@ elif page == "EDA":
 
 
     elif selection == "Grad-CAM":
-        show_fig("grad_cam_fig")
+        gradcam_fig = joblib.load(r"C:\Users\jagad\Documents\my_classes\Tasks\my_projects\Deep_Fake_project_final\charts\eda\grad_cam_fig.pkl")
+        st.plotly_chart(gradcam_fig, use_container_width=True)
+
+
+
+
 
 
 # ------------------------------------------------------------------
@@ -400,15 +386,9 @@ elif page == "Image Prediction":
 
             with right:
                 st.subheader("Prediction Result")
-                if prediction == "FAKE":
-                    st.error(f"This image looks **FAKE** ({confidence:.2f}% confidence)")
-                else:
-                    st.success(f"This image looks **REAL** ({confidence:.2f}% confidence)")
 
                 c1, c2, c3 = st.columns(3)
                 c1.metric("Prediction", prediction)
-                c2.metric("Confidence", f"{confidence:.2f}%")
-                c3.metric("FAKE / REAL", f"{rf_probs[0] * 100:.0f}% / {rf_probs[1] * 100:.0f}%")
 
                 st.subheader("Estimated Gender and Age Group")
                 c1, c2 = st.columns(2)
@@ -418,6 +398,7 @@ elif page == "Image Prediction":
                     else:
                         g_idx = int(gender_probs.argmax())
                         st.metric("Gender", CLASSES["gender"][g_idx])
+                        
                 with c2:
                     if age_probs is None:
                         st.warning(age_err)
