@@ -90,8 +90,9 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 - Gender count before cleaning Unknown -> 4,507 , Female -> 1,033 & Male -> 1,017,  whereas after cleaning Unknown -> 2,612, Female -> 1,453 & Male -> 1,023. From this we can understand moreover counts are affected for both genders.
 
 ## Age group count before and after:
-<img width="1352" height="570" alt="image" src="https://github.com/user-attachments/assets/8e2fcfe2-bc68-4df7-aec4-07b1f7a6557d" />
-<img width="608" height="555" alt="age_group_wise_dist_real_and_fake_images" src="https://github.com/user-attachments/assets/bfbacdf3-ddcb-4835-96f8-ced09a94a862" />
+<img width="1114" height="408" alt="age_dist_before_after" src="https://github.com/user-attachments/assets/a1d813b6-879b-4547-b7a4-8aa51d4669bd" />
+<img width="558" height="402" alt="age_group_wise_dist_real_and_fake_images" src="https://github.com/user-attachments/assets/ce519d3d-1e75-4423-a1ef-76ec8de6af17" />
+
 
 - Age counts before cleaning 18-25 -> 1681, 36-50 -> 1670, 26-35 -> 1650 & 50+ -> 1556, whereas after cleaning 18-25 -> 330, 36-50 -> 338, 26-35 -> 1,484, 50+ -> 219 & not_applicable -> 2,638.
 - From this picture we're come's to know that real and fake images are somewhat equally placed.
