@@ -80,7 +80,7 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 ## Real vs Fake images Before and After:
 <img width="1117" height="368" alt="real_vs_fake_before_after" src="https://github.com/user-attachments/assets/92e751f3-032e-48b6-b426-7be1c8dbf04f" />
 
-- Image count, Before cleaning real -> 2,790 (42.5%) and fake -> 3,767 (57.5%) and After cleaning real -> 2,368 (46.3%) and fake -> 2,746 (53.7%). From this we can say more than 1,000 images are fake and some count reduced in real is duplicate.
+- Image count, Before cleaning real -> 2,790 (42.5%) and fake -> 3,767 (57.5%) and After cleaning real -> 2,593 (51%) and fake -> 2,495 (49%). From this we can say more than 1,000 images are fake and some count reduced in real is duplicate.
 
 ## Gender Count Before and After:
 <img width="1114" height="402" alt="gender_dist_before_after" src="https://github.com/user-attachments/assets/0e64cacf-8d4c-412d-8c4e-8e86829a5ad7" />
