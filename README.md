@@ -84,11 +84,10 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 
 ## Gender Count Before and After:
 <img width="1114" height="402" alt="gender_dist_before_after" src="https://github.com/user-attachments/assets/0e64cacf-8d4c-412d-8c4e-8e86829a5ad7" />
-
 <img width="550" height="397" alt="gender_wise_dist_real_and_fake_images" src="https://github.com/user-attachments/assets/46dc0869-a668-49ad-a462-a9fc2a5c5003" />
 
 
-- Gender count before cleaning Unknown -> 4,507 , Female -> 1,033 & Male -> 1,017,  whereas after cleaning Unknown -> 3,354, Female -> 890 & Male -> 870. From this we can understand moreover counts are affected for both genders.
+- Gender count before cleaning Unknown -> 4,507 , Female -> 1,033 & Male -> 1,017,  whereas after cleaning Unknown -> 2,612, Female -> 1,453 & Male -> 1,023. From this we can understand moreover counts are affected for both genders.
 
 ## Age group count before and after:
 <img width="1352" height="570" alt="image" src="https://github.com/user-attachments/assets/8e2fcfe2-bc68-4df7-aec4-07b1f7a6557d" />
