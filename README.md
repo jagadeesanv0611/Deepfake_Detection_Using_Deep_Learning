@@ -83,7 +83,11 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 - Image count, Before cleaning real -> 2,790 (42.5%) and fake -> 3,767 (57.5%) and After cleaning real -> 2,368 (46.3%) and fake -> 2,746 (53.7%). From this we can say more than 1,000 images are fake and some count reduced in real is duplicate.
 
 ## Gender Count Before and After:
-<img width="1353" height="572" alt="gender_dist_before_after" src="https://github.com/user-attachments/assets/1c791727-74f5-4e57-b847-4ef5b69bf370" />
+<img width="1114" height="402" alt="gender_dist_before_after" src="https://github.com/user-attachments/assets/0e64cacf-8d4c-412d-8c4e-8e86829a5ad7" />
+
+<img width="550" height="397" alt="gender_wise_dist_real_and_fake_images" src="https://github.com/user-attachments/assets/46dc0869-a668-49ad-a462-a9fc2a5c5003" />
+
+
 - Gender count before cleaning Unknown -> 4,507 , Female -> 1,033 & Male -> 1,017,  whereas after cleaning Unknown -> 3,354, Female -> 890 & Male -> 870. From this we can understand moreover counts are affected for both genders.
 
 ## Age group count before and after:
