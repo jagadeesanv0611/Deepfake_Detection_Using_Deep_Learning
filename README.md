@@ -97,8 +97,7 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 - Age counts before cleaning 18-25 -> 1681, 36-50 -> 1670, 26-35 -> 1650 & 50+ -> 1556, whereas after cleaning 18-25 -> 330, 36-50 -> 338, 26-35 -> 1,484, 50+ -> 219 & not_applicable -> 2,638.
 - From this picture we're come's to know that real and fake images are somewhat equally placed.
 
-# Correlation Analysis:
-- Correlation analysis is made to check whether each feature depends on other feature in a dataset.
+
 
 ## Association between variables:
 <img width="602" height="528" alt="correlation_bet_variables" src="https://github.com/user-attachments/assets/b010b47d-0f44-4926-bb8e-46af8e6192f8" />
@@ -147,13 +146,16 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 
 # Confusion Matrix:
 ### Based on testing:
-<img width="602" height="553" alt="confusion_matrix_ResNet50_test" src="https://github.com/user-attachments/assets/cf21f7a8-fe6c-453d-80d0-cc7b99886ec0" />
+<img width="1118" height="386" alt="confusion_matrix_test" src="https://github.com/user-attachments/assets/79052448-302e-47db-8051-c4eb6d3f5014" />
+
 
 ### Based on validation:
-<img width="598" height="565" alt="confusion_matrix_ResNet50_val" src="https://github.com/user-attachments/assets/5e6912a5-ca1f-4d28-afa8-f19b91b4e79c" />
+<img width="1110" height="392" alt="confusion_matrix_val" src="https://github.com/user-attachments/assets/94b78298-faca-4961-b367-c905625be563" />
+
 
 ### Based on training:
-<img width="605" height="562" alt="confusion_matrix_ResNet50_train" src="https://github.com/user-attachments/assets/3d543f07-22c7-4fc6-80a0-efc65c5cf943" />
+<img width="1098" height="378" alt="confusion_matrix_train" src="https://github.com/user-attachments/assets/6c59e2e0-a6a3-4fe0-9821-46ca61863e46" />
+
 
 
 # Model Deployment:
