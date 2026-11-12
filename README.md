@@ -48,17 +48,17 @@
 | Images downloaded successfully | 5,557 (84.8%) |
 | Failed downloads | 1,000 (dead links, timeouts, connection errors) |
  
-- After Downloading only 5,557 images are passed and 1,000 are failed to download, so failed one can be considered as fake. Even though images are downloaded have to check whether any duplicate images are repeated because for model train and analyze their should not be repeated images, then the model will be affected in accuracy. After removing duplicate images, final count is 5114, so, the overall percentage is 78%.
+- After Downloading only 5,557 images are passed and 1,000 are failed to download, so failed one can be considered as fake. Even though images are downloaded have to check whether any duplicate images are repeated because for model train and analyze their should not be repeated images, then the model will be affected in accuracy. After removing duplicate images, final count is 5088, so, the overall percentage is 78%.
 
 # Data Splitting:
-- Before preprocessing data must be split in 70/15/15, it is splitted in stratified way train/test/validation, where the overall combine real and fake counts 5,114 is splitted for train -> 3581 images, val -> 765 images, test -> 768 images keeping the Real/Fake ratio equal in each.
+- Before preprocessing data must be split in 70/20/10, it is splitted in stratified way train/test/validation, where the overall combine real and fake counts 5,088 is splitted for train -> 3561 images, val -> 508 images, test -> 1019 images keeping the Real/Fake ratio equal in each.
 
 
 | Split | Images | REAL share |
 |---|---|---|
-| Train | 3,581 | 50.2% |
-| Validation | 765 | 50.2% |
-| Test | 768 | 50.2% |
+| Train | 3,561 | 70% |
+| Validation | 508 | 10% |
+| Test | 1019 | 20% |
 
 # Data Preprocessing:
 - In data preprocessing, image resize concept is used because sizes vary widely: 127 to 1080 px wide and 128 to 2440 px high, so every image has to be resized. According to our project requirement all images are resized as 224 x 224 pixels, convert to a tensor, normalize with the ImageNet mean and standard deviation.
