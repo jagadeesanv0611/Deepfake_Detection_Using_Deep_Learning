@@ -118,30 +118,14 @@ A custom Dataset loads one image at a time. Dataloader batches them (batch size 
 - From the above chart we understood how the image features width, height, aspect ratio, file size kb and brightness are correlate with label.
 
 # Model Training:
-- For this project three models are trained, those are Custom CNN, ResNet50 and ViT.
+- For this project five models are trained, those are Custom CNN, EfficientNet-B0, ResNet50, VGG16 & ViT (Vision Transfer)
 - The results are,
 
 ### Model Performance Comparison
+- From these five models,
+  - For Real/Fake, ResNet50
+  - For Age group & Gender, ViT
 
-| Model | Metric | Train | Validation | Test |
-| :--- | :--- | :--- | :--- | :--- |
-| **Custom CNN** | Accuracy | 0.9668 | 0.9686 | 0.9688 |
-| | Precision | 0.9967 | 0.9974 | 0.9949 |
-| | Recall | 0.9412 | 0.9440 | 0.9466 |
-| | F1-Score | 0.9682 | 0.9700 | 0.9701 |
-| | AUC-ROC | 0.9923 | 0.9909 | 0.9911 |
-| **ResNet50** | Accuracy | 0.9994 | 0.9935 | 0.9948 |
-| | Precision | 1.0000 | 1.0000 | 0.9951 |
-| | Recall | 0.9990 | 0.9878 | 0.9951 |
-| | F1-Score | 0.9995 | 0.9939 | 0.9951 |
-| | AUC-ROC | 1.0000 | 0.9998 | 0.9998 |
-| **ViT** | Accuracy | 0.9989 | 0.9895 | 0.9922 |
-| | Precision | 1.0000 | 0.9951 | 0.9975 |
-| | Recall | 0.9979 | 0.9854 | 0.9879 |
-| | F1-Score | 0.9990 | 0.9902 | 0.9927 |
-| | AUC-ROC | 1.0000 | 0.9991 | 0.9992 |
-
-- From this ResNet50 is best when compare with other models results.
 
 
 # Confusion Matrix:
