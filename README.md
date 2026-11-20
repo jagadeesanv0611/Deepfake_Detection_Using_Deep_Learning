@@ -13,7 +13,6 @@
 ### Model Building & Training:
 - torch
 - torchvision
-- copy
 
 ### Evaluation:
 - grad-cam
