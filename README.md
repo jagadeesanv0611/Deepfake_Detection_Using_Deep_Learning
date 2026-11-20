@@ -8,8 +8,6 @@
 - pandas
 - numpy
 - tqdm
-- opencv-python
-- pillow
 - path
 
 ### Model Building & Training:
